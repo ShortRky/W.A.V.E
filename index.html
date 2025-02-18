@@ -7,37 +7,78 @@
     <link rel="stylesheet" href="styles/global.css">
 </head>
 <body>
-    <header>
+    <div id="navbar"></div> <!-- This is where we'll inject the navbar -->
+    <!-- Sidebar (conditionally shown) -->
+<div id="sidebar" class="sidebar">
+    <ul>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#vision">Vision</a></li>
+        <li><a href="#cta">Join the Wave</a></li>
+    </ul>
+</div>
+    <!-- Hero Section -->
+    <section class="hero">
         <h1>M.I.A Wave</h1>
         <p>Elevating Minds, Shaping Power</p>
-    </header>
+        <button class="cta-button">Join the Movement</button>
+    </section>
 
-    <section class="main-content">
-        <h2>Welcome to M.I.A Wave</h2>
-        <p>A place for those seeking to master themselves and the world around them.</p>
+    <!-- About Section -->
+    <section class="about fade-in">
+        <h2>What is M.I.A Wave?</h2>
+        <p>A platform designed to empower students by providing valuable resources, knowledge, and tools for personal growth.</p>
+    </section>
 
-        <!-- Box Section -->
-        <div class="boxes-container">
-            <div class="box">
-                <h3>AI Integration</h3>
-                <p>Advanced AI for personalized experiences and growth.</p>
-            </div>
-            <div class="box">
-                <h3>Operating System</h3>
-                <p>A platform designed for efficiency and freedom.</p>
-            </div>
-            <div class="box">
-                <h3>Chess Strategy</h3>
-                <p>Enhance your strategic thinking through classic gameplay.</p>
-            </div>
+    <!-- Features Section -->
+    <section class="features">
+        <div class="feature-box fade-in">
+            <h3>📌 AI Integration</h3>
+            <p>Advanced AI features that personalize your learning experience.</p>
         </div>
+        <div class="feature-box fade-in">
+            <h3>⚡ Custom Operating System</h3>
+            <p>Designed for speed, efficiency, and a distraction-free workflow.</p>
+        </div>
+        <div class="feature-box fade-in">
+            <h3>♟️ Chess Strategy</h3>
+            <p>Train your strategic thinking and outmaneuver obstacles.</p>
+        </div>
+    </section>
 
-        <button>Enter the Wave</button>
-        <button>Join the Movement</button>
+    <!-- Vision Section -->
+    <section class="vision fade-in">
+        <h2>The Vision</h2>
+        <p>Our mission is to create a platform where students can master their fields, unlock their potential, and shape their future.</p>
+    </section>
+
+    <!-- User Benefits -->
+    <section class="benefits">
+        <div class="benefit-item fade-in">
+            <h3>🚀 Self-Mastery</h3>
+            <p>Techniques to control your emotions, actions, and mindset.</p>
+        </div>
+        <div class="benefit-item fade-in">
+            <h3>🌎 Global Influence</h3>
+            <p>Learn how to make an impact beyond just academics.</p>
+        </div>
+        <div class="benefit-item fade-in">
+            <h3>🤝 Community</h3>
+            <p>Connect with like-minded individuals who strive for greatness.</p>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta fade-in">
+        <h2>Join the Wave</h2>
+        <p>Sign up today to start your journey towards mastery.</p>
+        <button class="cta-button">Sign Up Now</button>
     </section>
 
     <footer>
         <p>&copy; 2025 M.I.A Wave. All Rights Reserved.</p>
     </footer>
+
+    <script type="module" src="scripts/main.js"></script>
 </body>
 </html>
