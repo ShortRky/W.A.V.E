@@ -3,20 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Join The Wave</title>
-    <link rel="stylesheet" href="styles/global.css">
-    <link rel="stylesheet" href="styles/signup.css">
+    <title>Sign Up / Sign In</title>
+    <link rel="stylesheet" href="../styles/signup.css">
+    <link rel="stylesheet" href="../styles/global.css">
 </head>
 <body>
-    <section class="signup">
-        <h2>Join The Wave</h2>
-        <form action="signup.php" method="POST">
-            <input type="text" name="name" placeholder="Full Name" required>
-            <input type="email" name="email" placeholder="Email Address" required>
-            <input type="password" name="password" placeholder="Password" required>
-            <button type="submit">Sign Up</button>
-        </form>
+    <div class="auth-container">
+        <!-- Sign Up Form -->
+        <div class="form-container signup-form">
+            <h2>Join the Wave</h2>
+            <form id="signup-form">
+                <div class="input-group">
+                    <input type="text" id="username" placeholder="Username" required>
+                </div>
+                <div class="input-group">
+                    <input type="email" id="email" placeholder="Email" required>
+                </div>
+                <div class="input-group">
+                    <input type="password" id="password" placeholder="Password" required>
+                </div>
+                <button type="submit" class="signup-btn">Sign Up</button>
+                <p class="switch-text">Already have an account? <span id="show-signin">Sign In</span></p>
+            </form>
+        </div>
+
+        <!-- Sign In Form -->
+        <div class="form-container signin-form">
+            <h2>Welcome Back</h2>
+            <form id="signin-form">
+                <div class="input-group">
+                    <input type="text" id="signin-username" placeholder="Username" required>
+                </div>
+                <div class="input-group">
+                    <input type="password" id="signin-password" placeholder="Password" required>
+                </div>
+                <button type="submit" class="signin-btn">Sign In</button>
+                <p class="switch-text">Don't have an account? <span id="show-signup">Sign Up</span></p>
+            </form>
+        </div>
+    </div>
+
+    <script type="module" src="../scripts/join.js"></script>
 </body>
-    <script type="module" src="scripts/navbar.js"></script>
-    <script type="module" src=""></script>
 </html>
+<!-- This page is a simple sign-up and sign-in form that allows users to create an account or log in to an existing account. The form is divided into two sections: one for signing up and another for signing in. The user can switch between the two forms by clicking on the "Sign In" or "Sign Up" links. The form data is validated using JavaScript, and the user's information is stored in the browser's local storage. -->
