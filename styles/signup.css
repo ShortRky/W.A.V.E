@@ -1,13 +1,38 @@
 body {
+    background: url('../assets/signup-bg.jpg') no-repeat center center/cover; /* Change to your image */
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #121212;
-    color: white;
-    font-family: Arial, sans-serif;
-    margin: 0;
 }
+
+.signup-container {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.5); /* Initial glow */
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.signup-container:hover {
+    box-shadow: 0 0 30px rgba(138, 43, 226, 0.7); /* Purple glow */
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.input-group input:hover {
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.7);
+}
+
 
 /* 🔹 Centering and Fixing Alignment */
 .auth-container {
@@ -103,7 +128,10 @@ button:hover {
     background-color: #4b0082;
     box-shadow: 0 0 15px rgba(75, 0, 130, 0.7);
 }
-
+.container:hover {
+    background-color: #000; /* Change background color to black on hover */
+    box-shadow: 0 0 15px rgba(19, 254, 105, 0.987);
+}
 /* 🔹 Switch Between Sign Up / Sign In */
 .switch-text {
     margin-top: 10px;

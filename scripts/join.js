@@ -17,3 +17,22 @@ document.addEventListener("DOMContentLoaded", function () {
         signinForm.style.transform = "translateX(100%)";
     });
 });
+
+document.getElementById("signup-form").addEventListener("submit", function (e) {
+    e.preventDefault(); // Stop normal submission
+
+    // Create the welcome message UI
+    const container = document.querySelector(".signup-container");
+    container.innerHTML = `
+        <h2>Welcome to W.A.V.E</h2>
+        <p>You're now part of the future.</p>
+        <p>Redirecting you to the homepage...</p>
+    `;
+
+    container.style.boxShadow = "0 0 30px rgba(255, 215, 0, 0.7)"; // Gold glow effect
+
+    // Delay before redirecting
+    setTimeout(() => {
+        window.location.href = "../index.html"; // Redirect home
+    }, 3000); // 3-second delay
+});
