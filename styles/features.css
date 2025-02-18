@@ -1,0 +1,66 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background: #111;
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    padding: 50px 20px;
+    background-color: #333; /* Dark-grey background for header */
+    color: white;
+}
+
+header h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.2em;
+    color: #ccc;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.feature-box, .feature-details {
+    background-color: #444; /* Dark-grey background for feature boxes */
+    color: white;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 800px;
+    transition: background-color 0.3s ease-in-out, transform 0.3s, box-shadow 0.3s;
+}
+
+.feature-box:hover, .feature-details:hover {
+    background-color: #000; /* Change background color to black on hover */
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px rgba(19, 254, 105, 0.987);
+}
+
+.feature-box h2, .feature-details h3 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.feature-box p, .feature-details p {
+    font-size: 1.2em;
+    color: #ccc;
+}
+
+footer {
+    padding: 20px;
+    background-color: #333; /* Dark-grey background for footer */
+    color: white;
+    text-align: center;
+}
