@@ -46,3 +46,8 @@ document.querySelectorAll('.cta-button').forEach(button => {
         window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
     });
 });
+
+// Redirect to about page on button click in the navbar
+document.querySelector('.navbar .about-button').addEventListener('click', () => {
+    window.location.href = 'pages/about.html';
+});

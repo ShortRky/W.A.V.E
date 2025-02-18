@@ -6,16 +6,19 @@
     <title>M.I.A Wave</title>
     <link rel="stylesheet" href="styles/global.css">
 </head>
+
 <body>
     <div id="navbar"></div> <!-- This is where we'll inject the navbar -->
     <!-- Sidebar (conditionally shown) -->
-<div id="sidebar" class="sidebar">
-    <ul>
-        <li><a href="#about">About Us</a></li>
-        <li><a href="#features">Features</a></li>
-        <li><a href="#vision">Vision</a></li>
-        <li><a href="#cta">Join the Wave</a></li>
-    </ul>
+    <div id="sidebar" class="sidebar">
+    <nav>
+        <ul>
+            <li><a href="pages/about.html" class="nav-link" target="_blank">About</a></li>
+            <li><a href="pages/features.html" class="nav-link">Features</a></li>
+            <li><a href="pages/vision.html" class="nav-link">Vision</a></li>
+            <li><a href="pages/signup.html" class="nav-link">Join the Wave</a></li>
+        </ul>
+    </nav>
 </div>
     <!-- Hero Section -->
     <section class="hero">
@@ -46,11 +49,31 @@
         </div>
     </section>
 
+    <!-- Educational Features Section -->
+    <section class="education-features fade-in">
+        <h2>Empowering Your Learning</h2>
+        <div class="feature-box">
+            <h3>🧮 AI-Powered Calculator</h3>
+            <p>Advanced calculations with step-by-step explanations.</p>
+        </div>
+        <div class="feature-box">
+            <h3>📚 Smart Resource Guide</h3>
+            <p>AI that directs you to the best learning materials based on your progress.</p>
+        </div>
+        <div class="feature-box">
+            <h3>📝 Study Assistance</h3>
+            <p>Interactive quizzes, problem-solving guides, and productivity tools.</p>
+        </div>
+    </section>
+
     <!-- Vision Section -->
     <section class="vision fade-in">
         <h2>The Vision</h2>
         <p>Our mission is to create a platform where students can master their fields, unlock their potential, and shape their future.</p>
     </section>
+    
+    </section>
+
 
     <!-- User Benefits -->
     <section class="benefits">
@@ -72,7 +95,7 @@
     <section class="cta fade-in">
         <h2>Join the Wave</h2>
         <p>Sign up today to start your journey towards mastery.</p>
-        <button class="cta-button">Sign Up Now</button>
+        <button class="cta-button" onclick="location.href='pages/signup.html'">Sign Up Now</button>
     </section>
 
     <footer>
