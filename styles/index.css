@@ -1,0 +1,251 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background: #111;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Hero Section */
+.hero {
+    background-color: #333; /* Dark-grey background for main boxes */
+    padding: 100px 20px;
+    text-align: center;
+    transition: background-color 0.3s ease-in-out; /* Add transition for smooth color change */
+}
+
+.hero:hover {
+    background-color: #000; /* Change background color to black on hover */
+    box-shadow: 0 0 15px rgba(19, 254, 105, 0.987);
+}
+
+.hero h1 {
+    font-size: 4em;
+    color: #fff;
+}
+
+.hero p {
+    font-size: 1.5em;
+    color: #ccc;
+}
+
+.cta-button {
+    background-color: #333; /* Dark-grey background for button */
+    color: white;
+    padding: 20px 40px;
+    font-size: 1.5em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #000000d2;
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px rgba(11, 255, 235, 0.987);
+}
+
+/* Features Section */
+.features {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px;
+    background-color: #333; /* Dark-grey background for main boxes */
+    transition: background-color 0.3s ease-in-out; /* Add transition for smooth color change */
+}
+
+.features:hover {
+    background-color: #000; /* Change background color to black on hover */
+    box-shadow: 0 0 15px rgba(19, 254, 105, 0.987);
+}
+
+.feature-box {
+    background-color: #d3d3d3; /* Light-grey background for sub-boxes */
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    width: 30%;
+}
+
+.feature-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px rgba(39, 255, 237, 0.7);
+}
+
+.feature-box h3 {
+    font-size: 2em;
+    color: #000;
+}
+
+.feature-box p {
+    font-size: 1.2em;
+    color: #333;
+}
+
+/* Educational Features Section */
+.education-features {
+    background-color: #333; /* Dark-grey background for main boxes */
+    padding: 50px;
+    transition: background-color 0.3s ease-in-out; /* Add transition for smooth color change */
+}
+
+.education-features:hover {
+    background-color: #000; /* Change background color to black on hover */
+    box-shadow: 0 0 15px rgba(19, 254, 105, 0.987);
+}
+
+.education-features h2 {
+    font-size: 2.5em;
+    color: #fff;
+    text-align: center;
+}
+
+.education-features .feature-box {
+    background-color: #d3d3d3; /* Light-grey background for sub-boxes */
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    width: 45%;
+    margin: 20px auto;
+}
+
+.education-features .feature-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px rgba(39, 255, 237, 0.7);
+}
+
+/* Vision Section */
+.vision {
+    background-color: #333; /* Dark-grey background for main boxes */
+    padding: 50px;
+    text-align: center;
+    transition: background-color 0.3s ease-in-out; /* Add transition for smooth color change */
+}
+
+.vision:hover {
+    background-color: #000; /* Change background color to black on hover */
+    box-shadow: 0 0 15px rgba(19, 254, 105, 0.987);
+}
+
+.vision h2 {
+    font-size: 2.5em;
+    color: #fff;
+}
+
+.vision p {
+    font-size: 1.2em;
+    color: #ccc;
+}
+
+/* Benefits Section */
+.benefits {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px;
+    background-color: #333; /* Dark-grey background for main boxes */
+    transition: background-color 0.3s ease-in-out; /* Add transition for smooth color change */
+}
+
+.benefits:hover {
+    background-color: #000; /* Change background color to black on hover */
+    box-shadow: 0 0 15px rgba(19, 254, 105, 0.987);
+}
+
+.benefit-item {
+    background-color: #d3d3d3; /* Light-grey background for sub-boxes */
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    width: 30%;
+    margin: 0 10px; /* Add margin to create space between items */
+}
+
+.benefit-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px rgba(39, 255, 237, 0.7);
+}
+
+.benefit-item h3 {
+    font-size: 2em;
+    color: #000;
+}
+
+.benefit-item p {
+    font-size: 1.2em;
+    color: #333;
+}
+
+/* Call to Action Section */
+.cta {
+    background-color: #333; /* Dark-grey background for main boxes */
+    color: rgb(255, 255, 255); /* Text color */
+    padding: 50px;
+    text-align: center;
+    transition: background-color 0.3s ease-in-out; /* Add transition for smooth color change */
+}
+
+.cta:hover {
+    background-color: #000; /* Change background color to black on hover */
+    box-shadow: 0 0 15px rgba(19, 254, 105, 0.987);
+}
+
+.cta h2 {
+    font-size: 2.5em;
+}
+
+.cta p {
+    font-size: 1.2em;
+}
+
+.cta-button {
+    background-color: #1da60d; /* Dark-grey background for button */
+    color: white; /* Text color of the button */
+    padding: 20px 40px;
+    font-size: 1.5em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #28ff0cfc; /* Background color of the button on hover */
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px rgba(15, 255, 235, 0.987);
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+footer section {
+    margin-top: 20px;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer ul li {
+    margin: 5px 0;
+}
+
+footer ul li a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+footer ul li a:hover {
+    text-decoration: underline;
+}

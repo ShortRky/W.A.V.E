@@ -29,25 +29,19 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// Conditionally show sidebar on certain pages (example pages)
-const currentPage = window.location.pathname;
-
-if (currentPage === '/' || currentPage === '/index.html') {
-    // Show sidebar for homepage if needed
-    document.getElementById('sidebar').classList.add('hide');
-} else {
-    // Hide sidebar for other pages
-    document.getElementById('sidebar').classList.remove('show');
-}
-
-// Smooth Scroll for Navigation (Future Implementation)
+// Smooth Scroll for Navigation
 document.querySelectorAll('.cta-button').forEach(button => {
     button.addEventListener('click', () => {
         window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
     });
 });
 
-// Redirect to about page on button click in the navbar
-document.querySelector('.navbar .about-button').addEventListener('click', () => {
-    window.location.href = 'pages/about.html';
+// Add event listener for the About button
+document.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', (event) => {
+        const target = event.target;
+        if (target.textContent.trim() === 'About') {
+            location.href = 'pages/about.html';
+        }
+    });
 });
