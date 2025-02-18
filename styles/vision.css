@@ -1,0 +1,49 @@
+/* General Styling */
+body {
+    background-color: #121212;
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Styling */
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #1a1a1a;
+    color: white;
+    border-bottom: 2px solid #333;
+}
+
+/* Scrollable Vision Section */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 40px 0;
+}
+
+/* Vision Boxes */
+.vision-box {
+    width: 80%;
+    max-width: 800px;
+    background-color: #57575727;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Glowing Effect Controlled by JavaScript */
+.vision-box:hover {
+    transform: scale(1.05);
+}
+
+/* Hover effect - make it glow or change */
+.header-box:hover {
+    background-color: rgba(40, 40, 40, 1); /* Slightly brighter on hover */
+    box-shadow: 0px 0px 15px rgba(0, 170, 255, 0.7); /* Subtle blue glow */
+}
