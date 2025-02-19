@@ -1,0 +1,98 @@
+/* Modal background */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1000; /* Ensure it's on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Darkened background */
+    overflow: auto;
+    transition: opacity 0.4s ease;
+}
+
+/* Modal content */
+.modal-content {
+    background: linear-gradient(135deg, #1f1f1f, #333333); /* Dark gradient */
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 12px;
+    width: 80%;
+    max-width: 400px;
+    color: white; /* Text color for readability */
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* When modal is active */
+.modal.fade-in .modal-content {
+    opacity: 1;
+}
+
+/* Close button (X) in top-right corner */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 28px;
+    color: #ccc;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+/* Hover effect on close button */
+.close:hover {
+    color: #fff;
+}
+
+/* Title styles */
+.modal h3 {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+/* Button container (flexbox) */
+.modal-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Button styles */
+.btn {
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Confirmation button style */
+.confirm-btn {
+    background-color: #4e74ff; /* Futuristic blue */
+    color: white;
+    border: 2px solid #3d62cc; /* Slight darker border */
+}
+
+/* Hover effect for confirmation button */
+.confirm-btn:hover {
+    background-color: #3d62cc;
+    box-shadow: 0 0 15px rgba(75, 0, 130, 0.4);
+}
+
+/* Cancel button style */
+.cancel-btn {
+    background-color: #ff2e2e; /* Red for danger/cancel */
+    color: white;
+    border: 2px solid #cc1a1a;
+}
+
+/* Hover effect for cancel button */
+.cancel-btn:hover {
+    background-color: #cc1a1a;
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.4);
+}

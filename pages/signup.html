@@ -6,12 +6,38 @@
     <title>Sign Up / Sign In</title>
     <link rel="stylesheet" href="../styles/signup.css">
     <link rel="stylesheet" href="../styles/global.css">
+    <link rel="stylesheet" href="../styles/modal.css">
 </head>
     <div id="navbar"></div> <!-- This is where we'll inject the navbar -->
     
     <script type="module" src="scripts/navbar.js"></script>
 <body>
-    <div class="auth-container">
+    <div class="auth-container" id="authContainer">
+   
+       <!-- Modal -->
+<div id="confirmationModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h3>Are you sure you want to go back?</h3>
+        <div class="modal-buttons">
+            <button id="confirmBack" class="btn confirm-btn">Yes, Go Back</button>
+            <button id="cancelBack" class="btn cancel-btn">Cancel</button>
+        </div>
+    </div>
+</div>
+
+<!-- The Back Button -->
+<a href="#" class="back-btn" id="backBtn"><< Back</a>
+        <script>
+            // Handle back button click
+            document.getElementById('backBtn').addEventListener('click', function(event) {
+                event.preventDefault(); // Prevent default anchor behavior
+                if (confirm("Are you sure you want to go back to the homepage?")) {
+                    window.location.href = '/index.html'; // Navigate to the index page
+                }
+            });
+        </script>
+
         <!-- Sign Up Form -->
         <div class="form-container signup-form">
             <h2>Join the Wave</h2>
@@ -50,3 +76,40 @@
 </body>
 </html>
 <!-- This page is a simple sign-up and sign-in form that allows users to create an account or log in to an existing account. The form is divided into two sections: one for signing up and another for signing in. The user can switch between the two forms by clicking on the "Sign In" or "Sign Up" links. The form data is validated using JavaScript, and the user's information is stored in the browser's local storage. -->
+
+<script>
+    // Get the modal, buttons, and close elements
+    var modal = document.getElementById('confirmationModal');
+    var backBtn = document.getElementById('backBtn');
+    var closeBtn = document.getElementsByClassName('close')[0];
+    var confirmBack = document.getElementById('confirmBack');
+    var cancelBack = document.getElementById('cancelBack');
+    
+    // Open the modal when the back button is clicked
+    backBtn.addEventListener('click', function(event) {
+        event.preventDefault(); // Prevent default anchor behavior
+        modal.classList.add('fade-in'); // Show the modal with fade-in effect
+    });
+    
+    // Close the modal when the close button is clicked
+    closeBtn.addEventListener('click', function() {
+        modal.classList.remove('fade-in'); // Fade-out the modal
+    });
+    
+    // If user confirms, redirect to the main menu (index.html)
+    confirmBack.addEventListener('click', function() {
+        window.location.href = '/index.html'; // Redirect to the main menu
+    });
+    
+    // If user cancels, hide the modal
+    cancelBack.addEventListener('click', function() {
+        modal.classList.remove('fade-in'); // Fade-out the modal
+    });
+    
+    // Close modal if user clicks outside of the modal content
+    window.onclick = function(event) {
+        if (event.target === modal) {
+            modal.classList.remove('fade-in'); // Fade-out the modal
+        }
+    };
+    </script>
