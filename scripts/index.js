@@ -45,3 +45,45 @@ document.querySelectorAll('.nav-link').forEach(link => {
         }
     });
 });
+
+// Fetch users.json (could also be from an API in a real-world application)
+const fetchUsersData = async () => {
+    try {
+        const response = await fetch('./path/to/users.json'); // Adjust path as needed
+        const users = await response.json();
+        return users;
+    } catch (error) {
+        console.error('Error fetching users:', error);
+        return [];
+    }
+};
+
+// Event listener for the login form
+const loginForm = document.getElementById('login-form');
+const usernameInput = document.getElementById('username');
+const passwordInput = document.getElementById('password');
+
+loginForm.addEventListener('submit', async function (event) {
+    event.preventDefault(); // Prevent form from refreshing the page
+
+    const enteredUsername = usernameInput.value;
+    const enteredPassword = passwordInput.value;
+
+    const users = await fetchUsersData();
+    const user = users.find(user => user.username === enteredUsername && user.password === enteredPassword);
+
+    if (user) {
+        if (user.role === 'special') {
+            // Special login credentials entered, store it
+            localStorage.setItem('specialUser', enteredUsername);
+            displaySpecialLogin(enteredUsername);  // Function to display special user UI
+        } else {
+            // Regular user login logic
+            localStorage.setItem('user', JSON.stringify(user));
+            document.getElementById('profile-section').style.display = 'block'; // Show profile
+            document.getElementById('profile-name').textContent = 'Welcome, ' + user.username;
+        }
+    } else {
+        console.log('Login failed: User not found or incorrect credentials');
+    }
+});

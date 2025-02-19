@@ -1,0 +1,17 @@
+[
+    {
+        "username": "Nsuu",
+        "password": "F0RSAKEND",
+        "role": "Ceo & Founder & Developer"
+    },
+    {
+        "username": "Admin1",
+        "password": "ForsAdmin1",
+        "role": "ADMIN"
+    },
+    {
+        "username": "TempUser",
+        "password": "123456",
+        "role": "TempUser"
+    }
+]
