@@ -1,129 +1,172 @@
-/* Centering the entire page */
+/* Reset styles */
 body {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #121212;
-    margin: 0;
+    background: #121212; /* Dark futuristic background */
+    font-family: Arial, sans-serif;
 }
 
-/* 🔹 Main Auth Container */
-.auth-container {
-    width: 380px;
-    height: 450px;
-    position: relative;
-    border-radius: 10px;
-    background-color: rgba(57, 56, 56, 0.272);
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    overflow: hidden;
-    transition: transform 0.5s ease-in-out;
-}
-
-/* 🔹 Centering the Forms */
-.container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    width: 100vw;
-    position: relative;
-}
-
-/* 🔹 General Form Styling */
-.form-container {
-    width: 350px;
-    padding: 20px;
-    background: rgba(0, 0, 0, 0.8);
-    border-radius: 12px;
-    box-shadow: 0 0 10px rgba(0, 255, 255, 0.7);
-    text-align: center;
+/* 🔙 Back Button Styling */
+.back-btn {
     position: absolute;
-    transition: box-shadow 0.3s ease-in-out;
+    top: 15px;
+    left: 15px;
+    background: darkslategray;
+    border: 2px solid rgb(0, 255, 225); /* Neon border */
+    color: rgba(0, 255, 255, 0.8);
+    font-size: 14px;
+    padding: 8px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
 }
 
-/* 🔹 Glow effect on hover */
-.form-container:hover {
-    box-shadow: 0 0 15px rgba(0, 255, 255, 1);
+/* Hover effect */
+.back-btn:hover {
+    background: rgba(0, 255, 255, 0.2);
+    box-shadow: 0 0 10px rgb(0, 255, 200);
+    color: rgb(0, 255, 200);
 }
 
-/* 🔹 Input styling */
+/* 🔹 Authentication Container (Glass Effect) */
+.auth-container {
+    position: relative;
+    width: 400px;
+    padding: 25px;
+    background: rgba(255, 255, 255, 0.1); /* Glass effect */
+    border-radius: 12px;
+    backdrop-filter: blur(10px); /* Blur effect */
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.3); /* Neon glow */
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+}
+
+/* 📩 Input Field Styling */
+.input-group {
+    position: relative;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+/* Textboxes: Smooth Borders, Background, Glow */
 .input-group input {
     width: 100%;
     padding: 12px;
-    margin: 10px 0;
-    border: none;
-    border-radius: 6px;
-    background: rgba(255, 255, 255, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    background: rgba(0, 0, 0, 0.5); /* Darker background */
     color: white;
+    box-shadow: cyan;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* 🟠 Input Group: Better Structure */
+.input-group {
+    width: 100%;
+    margin-bottom: 20px; /* Space between inputs */
+    display: flex;
+    justify-content: center;
+}
+
+/* ✨ Smooth Light Gray Inputs */
+.input-group input {
+    width: 80%; /* Keeps it structured */
+    padding: 14px;
+    border: none;
+    border-radius: 8px; /* Smooth edges */
+    background: rgba(200, 200, 200, 0.2); /* Light gray */
+    color: white;
+    font-size: 16px;
+    transition: all 0.3s ease-in-out;
     outline: none;
-    transition: background 0.3s ease-in-out;
 }
 
-/* 🔹 Glow effect when typing */
+/* 🔥 Subtle Glow on Hover */
+.input-group input:hover {
+    background: rgb(220, 220, 220);
+}
+
+/* ⚡ Neon Glow on Focus (Typing) */
 .input-group input:focus {
-    background: rgba(255, 255, 255, 0.4);
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
+    border: 1px solid rgba(0, 255, 255, 0.8);
 }
 
-/* 🔹 Button styling */
+/* 💬 Placeholder Text (Fades In/Out) */
+.input-group input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+    font-style: italic;
+    transition: color 0.3s ease-in-out;
+}
+
+/* When Typing, Placeholder Fades Out */
+.input-group input:focus::placeholder {
+    color: rgba(255, 255, 255, 0.2);
+}
+
+/* 🟢 Glow Effect on Hover */
+.input-group input:hover {
+    border-color: rgba(0, 255, 255, 0.6);
+}
+
+/* 🟢 Glow Effect on Focus (Typing) */
+.input-group input:focus {
+    border-color: rgba(0, 255, 255, 1);
+    box-shadow: 0 0 10px rgba(0, 255, 255, 1);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* 🚀 Futuristic Button Styling */
 button {
     width: 100%;
     padding: 12px;
     margin-top: 10px;
-    background: cyan;
+    background: linear-gradient(90deg, rgba(0, 255, 255, 0.7), rgba(0, 128, 255, 0.7));
     border: none;
     border-radius: 6px;
     color: black;
     font-weight: bold;
     cursor: pointer;
-    transition: background 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    font-size: 16px;
 }
 
-/* 🔹 Glow effect when hovering */
+/* 🚀 Neon Glow Hover */
 button:hover {
-    background: rgba(0, 255, 255, 0.7);
-    box-shadow: 0 0 10px rgba(0, 255, 255, 0.7);
+    background: linear-gradient(90deg, rgba(0, 255, 255, 1), rgba(0, 128, 255, 1));
+    box-shadow: 0 0 15px rgba(0, 255, 255, 1);
 }
 
-/* 🔹 Fix: Sign-in switch button hover effect */
-.switch-button:hover {
-    background: rgba(0, 255, 255, 0.7);
-    box-shadow: 0 0 15px rgba(0, 255, 255, 0.7);
-}
-
-/* 🔹 Hide forms by default */
+/* 🔹 Form Switching */
 .signup-form, .signin-form {
     display: none;
+    color: white;
     animation: fadeIn 0.3s ease-in-out;
 }
 
-/* 🔹 Show the signup form by default */
+/* Show signup form by default */
 .signup-form {
     display: block;
 }
 
-/* 🔹 Fix: Prevent Sign-in Form from shifting */
-.signin-form {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    transition: transform 0.4s ease-in-out;
-    transform: translateX(100%);
+/* 🔹 Switch Form Button */
+.switch-btn {
+    background: none;
+    border: none;
+    color: rgba(0, 255, 255, 0.8);
+    font-size: 14px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: color 0.3s;
 }
 
-/* 🔹 Fix: Smooth Sign-up to Sign-in transition */
-.show-signin .signup-form {
-    transform: translateX(-100%);
-}
-
-.show-signin .signin-form {
-    transform: translateX(0);
-    display: block;
+/* Hover effect */
+.switch-btn:hover {
+    color: rgba(0, 255, 255, 1);
 }
 
 /* 🔹 Smooth fade animation */

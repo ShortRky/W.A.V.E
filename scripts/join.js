@@ -1,6 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
     const signupForm = document.querySelector(".signup-form");
     const signinForm = document.querySelector(".signin-form");
+    const switchToSignIn = document.getElementById("switch-to-signin");
+    const switchToSignUp = document.getElementById("switch-to-signup");
 
     function switchForm(showSignIn) {
         if (showSignIn) {
