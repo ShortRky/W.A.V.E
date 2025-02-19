@@ -1,301 +1,139 @@
+/* Centering the entire page */
 body {
-    background: url('../assets/signup-bg.png') no-repeat center center/cover; /* Change to your image */
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    background-color: #121212;
+    margin: 0;
 }
 
-/* Modal background */
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed;
-    z-index: 1000; /* Ensure it's on top */
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.6); /* Darkened background */
-    overflow: auto;
-    transition: opacity 0.4s ease;
-}
-
-/* Modal content */
-.modal-content {
-    background: linear-gradient(135deg, #1f1f1f, #333333); /* Dark gradient */
-    margin: 15% auto;
-    padding: 20px;
-    border-radius: 12px;
-    width: 80%;
-    max-width: 400px;
-    color: white; /* Text color for readability */
-    text-align: center;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.7);
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
-}
-
-/* When modal is active */
-.modal.fade-in .modal-content {
-    opacity: 1;
-}
-
-/* Close button (X) in top-right corner */
-.close {
-    position: absolute;
-    top: 15px;
-    right: 20px;
-    font-size: 28px;
-    color: #ccc;
-    cursor: pointer;
-    transition: color 0.3s;
-}
-
-/* Hover effect on close button */
-.close:hover {
-    color: #fff;
-}
-
-/* Title styles */
-.modal h3 {
-    font-size: 22px;
-    margin-bottom: 20px;
-}
-
-/* Button container (flexbox) */
-.modal-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-/* Button styles */
-.btn {
-    padding: 12px 25px;
-    border-radius: 8px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-/* Confirmation button style */
-.confirm-btn {
-    background-color: #4e74ff; /* Futuristic blue */
-    color: white;
-    border: 2px solid #3d62cc; /* Slight darker border */
-}
-
-/* Hover effect for confirmation button */
-.confirm-btn:hover {
-    background-color: #3d62cc;
-    box-shadow: 0 0 15px rgba(75, 0, 130, 0.4);
-}
-
-/* Cancel button style */
-.cancel-btn {
-    background-color: #ff2e2e; /* Red for danger/cancel */
-    color: white;
-    border: 2px solid #cc1a1a;
-}
-
-/* Hover effect for cancel button */
-.cancel-btn:hover {
-    background-color: #cc1a1a;
-    box-shadow: 0 0 15px rgba(255, 0, 0, 0.4);
-}
-
-/* Back Button Styles */
-.back-btn {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    color: white;
-    font-size: 18px;
-    text-decoration: none;
-    transition: color 0.3s;
-    z-index: 999; /* Ensure it's on top of other elements */
-}
-
-/* Back Button Hover Effect */
-.back-btn:hover {
-    background-color: rgba(255, 255, 255, 0.8); /* Darker background on hover */
-    color: #1b8dff; /* Light blue text on hover */
-    box-shadow: 0 0 15px rgb(21, 255, 243); /* Slightly stronger glow */
-}
-
-/* Back Button Active (clicked) Effect */
-.back-btn:active {
-    background-color: rgba(0, 0, 0, 1); /* Full black background on click */
-    color: #4b0082; /* Darker text when clicked */
-    box-shadow: 0 0 20px rgba(75, 0, 130, 0.7); /* Purple glow on active */
-}
-
-button {
-    padding: 10px 20px;
-    border: none;
-    background-color: #1e90ff;
-    color: white;
-    border-radius: 5px;
-    margin: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-button:hover {
-    background-color: #4b0082;
-}
-
-.back-btn {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    color: white;
-    font-size: 18px;
-    text-decoration: none;
-    z-index: 9999;
-}
-
-.signup-container {
-    padding: 30px;
-    border-radius: 10px;
-    text-align: center;
-    background-color: darkslategray;
-    box-shadow: 0 0 20px rgb(255, 240, 26); /* Initial glow */
-}
-
-.signup-container:hover {
-    box-shadow: 0 0 30px rgba(138, 43, 226, 0.7); /* Purple glow */
-}
-
-.input-group input {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    transition: 0.3s;
-}
-
-.input-group input:hover {
-    box-shadow: 0 0 10px rgba(0, 255, 255, 0.7);
-}
-
-
-/* 🔹 Centering and Fixing Alignment */
+/* 🔹 Main Auth Container */
 .auth-container {
-    position: relative;
     width: 380px;
-    height: 420px;
-    overflow: hidden;
+    height: 450px;
+    position: relative;
     border-radius: 10px;
     background-color: rgba(57, 56, 56, 0.272);
     box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
-    transition: transform 0.5s ease-in-out;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 20px;
+    overflow: hidden;
+    transition: transform 0.5s ease-in-out;
 }
 
-/* 🔹 Glow Effect */
-.auth-container:hover {
-    box-shadow: 0 0 20px rgba(0, 153, 255, 0.6);
+/* 🔹 Centering the Forms */
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    position: relative;
 }
 
-/* 🔹 Fix Form Positioning */
+/* 🔹 General Form Styling */
 .form-container {
-    position: absolute;
-    width: 100%;
-    height: 100%;
+    width: 350px;
     padding: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.7);
     text-align: center;
-    transition: transform 0.5s ease-in-out;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    position: absolute;
+    transition: box-shadow 0.3s ease-in-out;
 }
 
-.signup-form {
-    transform: translateX(0);
-    color: rgb(40, 234, 255);
+/* 🔹 Glow effect on hover */
+.form-container:hover {
+    box-shadow: 0 0 15px rgba(0, 255, 255, 1);
 }
 
-.signin-form {
-    transform: translateX(100%);
-    color: rgb(135, 61, 238);
-}
-
-/* 🔹 Input Fields */
-.input-group {
-    margin: 15px 0;
+/* 🔹 Input styling */
+.input-group input {
     width: 100%;
-    display: flex;
-    justify-content: center;
-}
-
-input {
-    width: 90%;
     padding: 12px;
+    margin: 10px 0;
     border: none;
-    border-radius: 5px;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
     outline: none;
-    font-size: 16px;
-    background-color: rgba(255, 255, 255, 0.2);
-    color: white;
-    text-align: center;
-    transition: background 0.3s, box-shadow 0.3s;
+    transition: background 0.3s ease-in-out;
 }
 
-/* 🔹 Input Glow on Hover */
-input:hover {
-    background-color: rgba(255, 255, 255, 0.3);
-    box-shadow: 0 0 10px rgba(0, 153, 255, 0.6);
+/* 🔹 Glow effect when typing */
+.input-group input:focus {
+    background: rgba(255, 255, 255, 0.4);
 }
 
-/* 🔹 Input Focus Effect (when typing) */
-input:focus {
-    box-shadow: 0 0 15px rgba(0, 153, 255, 0.8);
-    background-color: rgba(255, 255, 255, 0.4);
-}
-
-/* 🔹 Buttons */
+/* 🔹 Button styling */
 button {
-    width: 90%;
+    width: 100%;
     padding: 12px;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    background-color: #1e90ff;
-    color: white;
-    transition: background 0.3s, box-shadow 0.3s;
-}
-
-/* 🔹 Hover Animation: Light Blue -> Dark Purple */
-button:hover {
-    background-color: #4b0082;
-    box-shadow: 0 0 15px rgba(75, 0, 130, 0.7);
-}
-.container:hover {
-    background-color: #000; /* Change background color to black on hover */
-    box-shadow: 0 0 15px rgba(19, 254, 105, 0.987);
-}
-/* 🔹 Switch Between Sign Up / Sign In */
-.switch-text {
     margin-top: 10px;
-    font-size: 14px;
-}
-
-.switch-text span {
-    color: #1e90ff;
-    cursor: pointer;
+    background: cyan;
+    border: none;
+    border-radius: 6px;
+    color: black;
     font-weight: bold;
-    transition: color 0.3s;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
 }
 
-.switch-text span:hover {
-    color: #fffc39;
+/* 🔹 Glow effect when hovering */
+button:hover {
+    background: rgba(0, 255, 255, 0.7);
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.7);
+}
+
+/* 🔹 Fix: Sign-in switch button hover effect */
+.switch-button:hover {
+    background: rgba(0, 255, 255, 0.7);
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.7);
+}
+
+/* 🔹 Hide forms by default */
+.signup-form, .signin-form {
+    display: none;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+/* 🔹 Show the signup form by default */
+.signup-form {
+    display: block;
+}
+
+/* 🔹 Fix: Prevent Sign-in Form from shifting */
+.signin-form {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: transform 0.4s ease-in-out;
+    transform: translateX(100%);
+}
+
+/* 🔹 Fix: Smooth Sign-up to Sign-in transition */
+.show-signin .signup-form {
+    transform: translateX(-100%);
+}
+
+.show-signin .signin-form {
+    transform: translateX(0);
+    display: block;
+}
+
+/* 🔹 Smooth fade animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
